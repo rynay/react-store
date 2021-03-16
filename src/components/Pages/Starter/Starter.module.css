@@ -1,0 +1,23 @@
+.starter {
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(192, 21, 152, 0.5), rgba(29, 114, 194, 0.5)),
+              url('https://images.macrumors.com/t/jXqUxBjwyt16A254unbNN51zn9A=/1920x/https://images.macrumors.com/article-new/2019/02/MR-Future-Products-2020-2.png');
+  background-position: center;
+  background-size: cover;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  margin: 0;
+  margin-top: -1em;
+  font-size: 10rem;
+  color: #fff;
+  letter-spacing: 0.01rem;
+  color: #ffffff00;
+  text-shadow: -0.35rem -0.35rem #fff;
+  background-clip: text;
+  background-image: linear-gradient(to right, rgba(0, 204, 255, 0.9), rgba(25, 0, 255, 0.9), rgba(190, 0, 248, 0.9), rgba(248, 0, 186, 0.9), rgba(248, 0, 116, 0.9))
+}
