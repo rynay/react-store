@@ -1,0 +1,66 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1.5em 0 1em;
+  display: flex;
+  align-items: center;
+  background: rgba(29, 29, 31, 0.93);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  margin-left: auto;
+}
+
+.cart img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.cart li {
+  display: inline;
+}
+
+.cart a {
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+}
+
+.nav ul {
+  flex: 1;
+  padding: 0 0.5em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  
+}
+
+.nav a:link,
+.nav a:visited {
+  padding: 0.5em 1.25em;
+  font-weight: 300;
+  color: #cecece;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #fff;
+  outline: none;
+}

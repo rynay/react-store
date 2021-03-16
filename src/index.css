@@ -4,7 +4,10 @@ html {
 }
 
 body {
+  margin: 0;
   font-size: 1.6rem;
+  color: #1d1d1f;
+  font-family: 'Roboto', sans-serif;
 }
 
 *,
