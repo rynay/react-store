@@ -1,5 +1,9 @@
 .product {
-  max-width: 30rem;
+  min-width: 30rem;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 0.5em;
+  padding: 2em 0 1em;
 }
 
 .product:hover img {
@@ -17,7 +21,7 @@
 }
 
 .product__price {
-  padding-left: 3rem;
+  padding-left: 1rem;
   font-size: 2rem;
   font-weight: bold;
   font-style: italic;
@@ -26,7 +30,7 @@
 .product__image_container {
   position: relative;
   overflow: hidden;
-  height: 20rem;
+  min-width: 20vw;
   display: grid;
   justify-items: center;
   align-items: center;

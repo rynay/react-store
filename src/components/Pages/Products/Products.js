@@ -8,11 +8,12 @@ const Products = () => {
     <div>
       <div className={s.products__header}>
         <h1>Our Products</h1>
-        
       </div>
-      <section className={s.products__grid}>
-        { products }
-      </section>
+      <div className={s.div}>
+        <section className={s.products__grid}>
+          { products }
+        </section>
+      </div>
     </div>
     
    );

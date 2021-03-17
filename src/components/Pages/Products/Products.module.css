@@ -1,11 +1,19 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .products__grid {
   margin: 0 auto;
   padding: 5rem 2rem;
-  display: grid;
+  width: 100%;
+  display: inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
   grid-column-gap: 2rem;
-  grid-row-gap: 10rem;
+  grid-row-gap: 2rem;
+  background: linear-gradient(to right bottom, rgba(255, 0, 179, 0.2), rgba(0, 119, 255, 0.2));
 }
 
 .products__header {
