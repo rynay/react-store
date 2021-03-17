@@ -1,0 +1,27 @@
+.products__grid {
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 10rem;
+}
+
+.products__header {
+  padding: 7rem;
+  background: linear-gradient(to left top, rgba(165, 0, 187, 0.5), rgba(4, 0, 218, 0.5)) ,url('https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/pol_apple-family-SOL-77147-der-209182.png') center center / contain no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__header h1 {
+  margin: 0;
+  font-size: 7rem;
+  color: #ffffff00;
+  text-shadow: -0.35rem -0.35rem #fff;
+  background-clip: text;
+  background-image: linear-gradient(to left, rgba(0, 204, 255, 0.9), rgba(25, 0, 255, 0.9), rgba(190, 0, 248, 0.9), rgba(248, 0, 186, 0.9), rgba(248, 0, 116, 0.9))
+}
