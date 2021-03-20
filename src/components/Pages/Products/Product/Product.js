@@ -16,7 +16,7 @@ const Product = ({ productInfo }) => {
   return ( 
     <section className={s.product}>
       <div className={s.product__image_container}>
-        <img src={img} alt=""/>
+        <img src={`/${img}`} alt=""/>
         <button onClick={addToCart} className={s.button} disabled={isInCart}>{isInCart ? 'In Cart' : 'Add'}</button>
       </div>
       <div className={s.product__info}>

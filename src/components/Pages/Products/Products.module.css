@@ -11,10 +11,10 @@
 }
 
 .products__grid {
-  flex: 1;
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
-  width: 100%;
   display: inline-grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
