@@ -6,10 +6,8 @@ const Product = ({ productInfo }) => {
   const { title, img, price, id } = productInfo;
   const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();
-  console.log(cart)
 
   const isInCart = !!(cart.filter(prod => prod.id === id).length);
-  console.log(isInCart)
   const addToCart = () => {
     dispatch(addItemAction(productInfo));
   }

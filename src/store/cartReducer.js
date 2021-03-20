@@ -6,9 +6,12 @@ const DECREMENT_PRODUCT_COUNT = 'DECREMENT_PRODUCT_COUNT';
 export const cartReducer = ( store = [],  action ) => {
   switch(action.type){
     case ADD_TO_CART:
+      const newItem = action.payload;
+      newItem.count = 1;
+      newItem.total = newItem.price;
       return ([
         ...store,
-        action.payload,
+        newItem,
       ]);
 
     case REMOVE_FROM_CART:
