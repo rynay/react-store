@@ -22,21 +22,23 @@ export const cartReducer = ( store = [],  action ) => {
     case INCREMENT_PRODUCT_COUNT:
       const newStoreInc = [...store];
       const idxInc = newStoreInc.findIndex(prod => prod.id === action.payload);
-      const targetProductInc = newStoreInc[idxInc];
+      const targetProductInc = {...newStoreInc[idxInc]};
 
       targetProductInc.count += 1;
       targetProductInc.total += targetProductInc.price;
+      newStoreInc[idxInc] = targetProductInc;
       return (newStoreInc);
 
     case DECREMENT_PRODUCT_COUNT:
       const newStoreDec = [...store];
       const idxDec = newStoreDec.findIndex(prod => prod.id === action.payload);
-      const targetProductDec = newStoreDec[idxDec];
+      const targetProductDec = {...newStoreDec[idxDec]};
 
       if(targetProductDec.count === 1) return [...store.filter(prod => prod.id !== action.payload)];
       
       targetProductDec.count -= 1;
       targetProductDec.total -= targetProductDec.price;
+      newStoreDec[idxDec] = targetProductDec;
       return (newStoreDec);
 
     default: 
