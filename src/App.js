@@ -6,9 +6,12 @@ import Cart from './components/Pages/Cart';
 import Products from './components/Pages/Products';
 import Starter from './components/Pages/Starter'
 
+import { store } from './store'
+import { Provider } from 'react-redux';
+
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -21,7 +24,7 @@ function App() {
           <Cart />
         </Route>
       </Switch>
-    </>
+    </Provider>
     
   );
 }

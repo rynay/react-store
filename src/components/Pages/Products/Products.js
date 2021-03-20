@@ -1,9 +1,11 @@
 import s from './Products.module.css';
 import { store } from '../../../store'
 import Product from './Product'
+import { useSelector } from 'react-redux';
  
 const Products = () => {
-  const products = store.products.map(product => <Product key={product.id} productInfo={product} />)
+  const productsList = useSelector(store => store.products);
+  const products = productsList.map(product => <Product key={product.id} productInfo={product} />)
   return ( 
     <div>
       <div className={s.products__header}>
