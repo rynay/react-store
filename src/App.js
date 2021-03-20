@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Cart from './components/Pages/Cart';
 import Products from './components/Pages/Products';
+import ProductPage from './components/Pages/Products/ProductPage';
 import Starter from './components/Pages/Starter'
 
 import { store } from './store'
@@ -17,8 +18,11 @@ function App() {
         <Route exact path="/">
           <Starter />
         </Route>
-        <Route path="/products/:category?">
+        <Route exact path="/products/:category?">
           <Products />
+        </Route>
+        <Route exact path="/product/:id?">
+          <ProductPage />
         </Route>
         <Route path="/cart">
           <Cart />
