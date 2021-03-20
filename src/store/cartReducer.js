@@ -13,24 +13,24 @@ export const cartReducer = ( store = [],  action ) => {
 
     case REMOVE_FROM_CART:
       return ([
-        ...store.filter(product => product.id !== action.payload.id),
+        ...store.filter(product => product.id !== action.payload),
       ]);
 
     case INCREMENT_PRODUCT_COUNT:
       const newStoreInc = [...store];
-      const idxInc = newStoreInc.findIndex(prod => prod.id === action.payload.id);
+      const idxInc = newStoreInc.findIndex(prod => prod.id === action.payload);
       const targetProductInc = newStoreInc[idxInc];
-      
+
       targetProductInc.count += 1;
       targetProductInc.total += targetProductInc.price;
       return (newStoreInc);
 
     case DECREMENT_PRODUCT_COUNT:
       const newStoreDec = [...store];
-      const idxDec = newStoreDec.findIndex(prod => prod.id === action.payload.id);
+      const idxDec = newStoreDec.findIndex(prod => prod.id === action.payload);
       const targetProductDec = newStoreDec[idxDec];
 
-      if(targetProductDec.count === 1) return [...store.filter(prod => prod.id !== action.payload.id)];
+      if(targetProductDec.count === 1) return [...store.filter(prod => prod.id !== action.payload)];
       
       targetProductDec.count -= 1;
       targetProductDec.total -= targetProductDec.price;
@@ -40,3 +40,9 @@ export const cartReducer = ( store = [],  action ) => {
       return store;
   }
 }
+
+
+export const addItemAction = (payload) => ({ type: ADD_TO_CART, payload });
+export const removeItemAction = (payload) => ({ type: REMOVE_FROM_CART, payload });
+export const incrementItemAction = (id) => ({ type: INCREMENT_PRODUCT_COUNT, payload: id })
+export const decrementItemAction = (id) => ({ type: DECREMENT_PRODUCT_COUNT, payload: id })
