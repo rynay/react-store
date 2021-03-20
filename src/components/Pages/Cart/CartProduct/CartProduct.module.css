@@ -1,0 +1,51 @@
+.item {
+  display: grid;
+  grid-template-columns: 15rem 5fr 2fr;
+}
+
+.image_container {
+  padding: 1rem;
+  max-height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_container img {
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.info {
+  display: flex;
+  padding: 1.5em 0;
+}
+
+.count {
+  display: flex;
+  align-items: start;
+}
+
+.counter {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5em;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+}
+
+
+
+.total {
+  padding: 0.25em;
+  min-width: 5em;
+  text-align: center;
+}
+
+
+
