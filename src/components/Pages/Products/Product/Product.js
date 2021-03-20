@@ -3,6 +3,7 @@ import s from './Product.module.css'
 import { addItemAction } from '../../../../store/cartReducer';
 
 const Product = ({ productInfo }) => {
+  console.log(productInfo);
   const { title, img, price, id } = productInfo;
   const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();

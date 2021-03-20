@@ -4,7 +4,14 @@
   align-items: center;
 }
 
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .products__grid {
+  flex: 1;
   margin: 0 auto;
   padding: 5rem 2rem;
   width: 100%;
