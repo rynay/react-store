@@ -18,7 +18,7 @@ const Header = () => {
           <li><NavLink to="/products/watch" activeClassName={s.active}>Watch</NavLink></li>
           <li className={s.cart}>
             <NavLink to="/cart" activeClassName={s.active}>
-              <img src="img/bag.svg" alt="Cart"/>
+              <img src="/img/bag.svg" alt="Cart"/>
             </NavLink>
           </li>
         </ul>

@@ -7,7 +7,7 @@
   padding: 1rem;
   max-height: 15rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 

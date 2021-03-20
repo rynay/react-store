@@ -1,7 +1,8 @@
 .div {
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .container {
@@ -11,13 +12,13 @@
 }
 
 .products__grid {
-  height: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 5rem 2rem;
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
+  align-content: start;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   background: linear-gradient(to right bottom, rgba(255, 0, 179, 0.2), rgba(0, 119, 255, 0.2));
