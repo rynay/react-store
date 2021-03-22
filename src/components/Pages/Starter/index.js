@@ -1,3 +1,3 @@
-import Starter from './Starter'
+import Starter from './Starter';
 
-export default Starter
+export default Starter;

@@ -5,9 +5,9 @@ import Header from './components/Header';
 import Cart from './components/Pages/Cart';
 import Products from './components/Pages/Products';
 import ProductPage from './components/Pages/Products/ProductPage';
-import Starter from './components/Pages/Starter'
+import Starter from './components/Pages/Starter';
 
-import { store } from './store'
+import { store } from './store';
 import { Provider } from 'react-redux';
 
 function App() {
@@ -29,7 +29,6 @@ function App() {
         </Route>
       </Switch>
     </Provider>
-    
   );
 }
 
