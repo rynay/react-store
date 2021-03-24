@@ -8,7 +8,7 @@
   height: 15rem;
   width: 15rem;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -24,7 +24,7 @@
 
 .count {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .counter {

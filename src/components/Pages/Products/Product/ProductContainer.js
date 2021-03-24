@@ -7,7 +7,7 @@ import Product from './Product';
 const ProductContainer = ({ productInfo, info }) => {
   const match = useRouteMatch();
   let product =
-    productInfo || products.find((prod) => prod.id == match.params.id);
+    productInfo || products.find((prod) => prod.id === match.params.id);
 
   const cart = useSelector((store) => store.cart);
   const dispatch = useDispatch();
