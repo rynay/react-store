@@ -1,25 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
 import s from './Product.module.css';
-import { addItemAction } from '../../../../store/cartReducer';
-import { products } from '../../../../store/products';
-import { useRouteMatch } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const Product = (props) => {
-  const { productInfo } = props;
-  const match = useRouteMatch();
-  let product =
-    productInfo || products.find((prod) => prod.id == match.params.id);
-
+const Product = ({ product, cart, addToCart, info = false }) => {
   const { title, img, price, id } = product;
-  const cart = useSelector((store) => store.cart);
-  const dispatch = useDispatch();
 
   const isInCart = !!cart.filter((prod) => prod.id === id).length;
-
-  const addToCart = () => {
-    dispatch(addItemAction(product));
-  };
 
   return (
     <Link to={`/product/${product.id}`} className={s.link}>
@@ -41,7 +26,7 @@ const Product = (props) => {
           <h2 className={s.product__title}>{title}</h2>
           <p className={s.product__price}>$ {price}</p>
         </div>
-        {props.info && <p className={s.description}>{product.info}</p>}
+        {info && <p className={s.description}>{product.info}</p>}
       </section>
     </Link>
   );
