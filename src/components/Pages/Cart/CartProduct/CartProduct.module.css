@@ -13,6 +13,7 @@
 
 .image_container img {
   max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
   object-position: center;
 }
@@ -39,13 +40,8 @@
   padding: 0.5rem 1rem;
 }
 
-
-
 .total {
   padding: 0.25em;
   min-width: 5em;
   text-align: center;
 }
-
-
-

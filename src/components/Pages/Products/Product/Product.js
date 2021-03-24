@@ -6,10 +6,8 @@ import { useRouteMatch } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-  console.log(props);
   const { productInfo } = props;
   const match = useRouteMatch();
-  console.log(match);
   let product =
     productInfo || products.find((prod) => prod.id == match.params.id);
 

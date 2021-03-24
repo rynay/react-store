@@ -5,7 +5,6 @@ import { useRouteMatch } from 'react-router';
 
 const Products = () => {
   const match = useRouteMatch();
-  console.log(match);
   let productsList = useSelector((store) => store.products);
   if (match.params.category) {
     let param =
