@@ -1,18 +1,7 @@
 import s from './Products.module.css';
 import Product from './Product';
-import { useSelector } from 'react-redux';
-import { useRouteMatch } from 'react-router';
 
-const Products = () => {
-  const match = useRouteMatch();
-  let productsList = useSelector((store) => store.products);
-  if (match.params.category) {
-    let param =
-      match.params.category === 'watch' ? 'series' : match.params.category;
-    productsList = productsList.filter((prod) =>
-      prod.title.toLowerCase().includes(param)
-    );
-  }
+const Products = ({ productsList }) => {
   const products = productsList.map((product) => (
     <Product key={product.id} productInfo={product} />
   ));

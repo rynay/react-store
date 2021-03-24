@@ -5,17 +5,16 @@
 
 .image_container {
   padding: 1rem;
-  max-height: 15rem;
+  height: 15rem;
+  width: 15rem;
   display: flex;
   align-items: start;
   justify-content: center;
 }
 
 .image_container img {
-  max-height: 100%;
   max-width: 100%;
-  object-fit: contain;
-  object-position: center;
+  max-height: 100%;
 }
 
 .info {
