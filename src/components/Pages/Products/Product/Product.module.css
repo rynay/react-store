@@ -48,7 +48,7 @@
   position: relative;
   overflow: hidden;
   min-width: 20vw;
-  min-height: 30vh;
+  height: 20rem;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -60,7 +60,7 @@
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   transform: scale(0.85);
-  max-height: 20rem;
+  height: 20rem;
   object-fit: contain;
   object-position: center;
   transition: transform 0.2s;

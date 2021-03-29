@@ -59,3 +59,9 @@
     rgba(248, 0, 116, 0.9)
   );
 }
+@media screen and (max-width: 40em) {
+  .products__header h1 {
+    text-align: center;
+    font-size: 5rem;
+  }
+}
