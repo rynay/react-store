@@ -1,6 +1,6 @@
 import CartProduct from './CartProduct';
 import s from './Cart.module.css';
-import Banner from './Banner';
+import Banner from '../../Banner';
 
 const Cart = ({ cart, removeAll }) => {
   const total = cart.reduce((acc, item) => acc + item.total, 0);
@@ -30,7 +30,7 @@ const Cart = ({ cart, removeAll }) => {
           </div>
         </div>
       ) : null}
-      <>{!items.length ? <Banner /> : null}</>
+      <>{!items.length ? <Banner title="Your cart is empty" /> : null}</>
     </>
   );
 };

@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Cart from './components/Pages/Cart';
 import Products from './components/Pages/Products';
 import ProductPage from './components/Pages/Products/ProductPage';
-import Starter from './components/Pages/Starter';
+import Banner from './components/Banner';
 
 import { store } from './store';
 import { Provider } from 'react-redux';
@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Starter />
+          <Banner title="Think Different" />
         </Route>
         <Route exact path="/products/:category?">
           <Products />
