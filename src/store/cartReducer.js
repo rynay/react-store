@@ -1,5 +1,6 @@
 const ADD_TO_CART = 'ADD_TO_CART';
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
 const INCREMENT_PRODUCT_COUNT = 'INCREMENT_PRODUCT_COUNT';
 const DECREMENT_PRODUCT_COUNT = 'DECREMENT_PRODUCT_COUNT';
 
@@ -13,6 +14,9 @@ export const cartReducer = (store = [], action) => {
 
     case REMOVE_FROM_CART:
       return [...store.filter((product) => product.id !== action.payload)];
+
+    case REMOVE_ALL_FROM_CART:
+      return [];
 
     case INCREMENT_PRODUCT_COUNT:
       const newStoreInc = [...store];
@@ -59,3 +63,5 @@ export const decrementItemAction = (id) => ({
   type: DECREMENT_PRODUCT_COUNT,
   payload: id,
 });
+
+export const removeAllAction = () => ({ type: REMOVE_ALL_FROM_CART });

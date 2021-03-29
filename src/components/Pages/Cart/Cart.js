@@ -1,7 +1,7 @@
 import CartProduct from './CartProduct';
 import s from './Cart.module.css';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, removeAll }) => {
   const total = cart.reduce((acc, item) => acc + item.total, 0);
 
   const items = cart.map((item) => <CartProduct key={item.id} item={item} />);
@@ -23,6 +23,9 @@ const Cart = ({ cart }) => {
       </section>
       {total ? (
         <div className={s.total}>
+          <button onClick={removeAll} className={s.remove_all}>
+            Remove All
+          </button>
           <div>Subtotal: $ {total}</div>
           <div>Taxes: $ {(total * 0.07).toFixed(0)}</div>
           <div>Total: $ {(total * 1.07).toFixed(0)}</div>
