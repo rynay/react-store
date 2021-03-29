@@ -21,12 +21,22 @@
   align-content: start;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  background: linear-gradient(to right bottom, rgba(255, 0, 179, 0.2), rgba(0, 119, 255, 0.2));
+  background: linear-gradient(
+    to right bottom,
+    rgba(197, 23, 145, 0.25),
+    rgba(44, 142, 255, 0.25)
+  );
 }
 
 .products__header {
   padding: 7rem 5rem 5rem;
-  background: linear-gradient(to left top, rgba(165, 0, 187, 0.5), rgba(4, 0, 218, 0.5)) ,url('https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/pol_apple-family-SOL-77147-der-209182.png') center center / contain no-repeat;
+  background: linear-gradient(
+      to left top,
+      rgba(165, 0, 187, 0.5),
+      rgba(4, 0, 218, 0.5)
+    ),
+    url('https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/pol_apple-family-SOL-77147-der-209182.png')
+      center center / contain no-repeat;
 
   display: flex;
   justify-content: center;
@@ -39,5 +49,12 @@
   color: #ffffff00;
   text-shadow: -0.35rem -0.35rem #fff;
   background-clip: text;
-  background-image: linear-gradient(to left, rgba(0, 204, 255, 0.9), rgba(25, 0, 255, 0.9), rgba(190, 0, 248, 0.9), rgba(248, 0, 186, 0.9), rgba(248, 0, 116, 0.9))
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 204, 255, 0.9),
+    rgba(25, 0, 255, 0.9),
+    rgba(190, 0, 248, 0.9),
+    rgba(248, 0, 186, 0.9),
+    rgba(248, 0, 116, 0.9)
+  );
 }
