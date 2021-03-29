@@ -1,6 +1,6 @@
 import CartProduct from './CartProduct';
 import s from './Cart.module.css';
-import { Link } from 'react-router-dom';
+import Banner from './Banner';
 
 const Cart = ({ cart, removeAll }) => {
   const total = cart.reduce((acc, item) => acc + item.total, 0);
@@ -30,16 +30,7 @@ const Cart = ({ cart, removeAll }) => {
           </div>
         </div>
       ) : null}
-      <>
-        {!items.length ? (
-          <div className={s.banner}>
-            <h2>Your cart is empty</h2>
-            <Link to="/products" className={s.shop}>
-              Start Shopping
-            </Link>
-          </div>
-        ) : null}
-      </>
+      <>{!items.length ? <Banner /> : null}</>
     </>
   );
 };
