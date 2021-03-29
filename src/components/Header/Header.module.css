@@ -60,7 +60,8 @@
 }
 
 .nav a:hover,
-.nav a:focus {
+.nav .active:link,
+.nav .active:visited {
   color: #fff;
   outline: none;
 }
