@@ -82,3 +82,12 @@
     font-size: 3rem;
   }
 }
+
+@media screen and (max-width: 30em) {
+  .total {
+    margin-top: 3rem;
+    align-self: center;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
