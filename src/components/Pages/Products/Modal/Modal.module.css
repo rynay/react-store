@@ -1,4 +1,6 @@
 .title {
+  position: relative;
+  z-index: 11;
   position: fixed;
   bottom: 0;
   left: 0;
