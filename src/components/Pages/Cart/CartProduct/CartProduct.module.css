@@ -8,6 +8,9 @@
 }
 
 .title {
+  font-size: 2rem;
+  margin: 0;
+  margin-top: 1.25em;
   justify-self: start;
   padding-left: 1.5em;
 }
@@ -53,14 +56,18 @@
   border: 3px solid rgba(255, 0, 0, 0.5);
   border-radius: 0.25em;
 
-  background: url('https://iconarchive.com/download/i104860/papirus-team/papirus-status/user-trash-full.ico')
-    center center / 75% no-repeat;
+  background-color: #fff;
+  background-image: url('https://iconarchive.com/download/i104860/papirus-team/papirus-status/user-trash-full.ico');
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+
+  transition: background-color 0.25s, background-size 0.15s;
 }
 
 .remove:hover {
-  background: linear-gradient(#ff000033, #ff000033),
-    url('https://iconarchive.com/download/i104860/papirus-team/papirus-status/user-trash-full.ico')
-      center center / 75% no-repeat;
+  background-color: rgb(255, 227, 227);
+  background-size: 75%;
 }
 
 .inc {
