@@ -1,8 +1,9 @@
 import s from './Product.module.css';
 import sInfo from './ProductInfo.module.css';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const Product = ({ product, cart, addToCart, info = false }) => {
+const Product = ({ product, cart, addToCart, info = false, history }) => {
   const styles = info ? sInfo : s;
   const { title, img, price, id } = product;
 
@@ -11,25 +12,38 @@ const Product = ({ product, cart, addToCart, info = false }) => {
   const buttons = (
     <>
       {info ? (
-        <Link
-          to={'/products'}
-          className={`${styles.button} ${styles.button_back}`}
+        <>
+          <Link
+            to={'/products'}
+            className={`${styles.button} ${styles.button_back}`}
+          >
+            To Products
+          </Link>
+          <Link
+            to={isInCart ? '/cart' : ''}
+            onClick={(e) => {
+              if (isInCart) return;
+              e.preventDefault();
+              addToCart();
+            }}
+            className={`${styles.button} ${styles.button_cart}`}
+            disabled={isInCart}
+          >
+            {isInCart ? 'In Cart' : 'Add'}
+          </Link>
+        </>
+      ) : (
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (!isInCart) addToCart();
+            if (isInCart) history.push('/cart');
+          }}
+          className={`${styles.button} ${styles.button_cart}`}
         >
-          To Products
-        </Link>
-      ) : null}
-      <Link
-        to={isInCart ? '/cart' : ''}
-        onClick={(e) => {
-          if (isInCart) return;
-          e.preventDefault();
-          addToCart();
-        }}
-        className={`${styles.button} ${styles.button_cart}`}
-        disabled={isInCart}
-      >
-        {isInCart ? 'In Cart' : 'Add'}
-      </Link>
+          {isInCart ? 'In Cart' : 'Add'}
+        </button>
+      )}
     </>
   );
 
@@ -64,4 +78,16 @@ const Product = ({ product, cart, addToCart, info = false }) => {
   );
 };
 
-export default Product;
+Product.propTypes = {
+  product: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  }),
+  cart: PropTypes.array.isRequired,
+  addToCart: PropTypes.func.isRequired,
+  info: PropTypes.bool,
+};
+
+export default withRouter(Product);

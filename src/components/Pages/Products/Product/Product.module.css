@@ -90,13 +90,9 @@
 
   cursor: pointer;
   transform: translate(100%, 100%);
-  transition: opacity 0.2s, transform 0.3s;
+  transition: opacity 0.2s, transform 0.3s, filter 0.3s;
 }
 
 .button:hover {
-  background-image: linear-gradient(
-    to right bottom,
-    rgb(92, 89, 255),
-    rgb(255, 90, 214)
-  );
+  filter: brightness(120%);
 }
