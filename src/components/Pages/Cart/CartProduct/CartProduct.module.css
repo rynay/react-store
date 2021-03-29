@@ -110,3 +110,48 @@
 .dec:hover {
   background-color: rgb(255, 221, 214);
 }
+
+@media screen and (max-width: 60em) {
+  .title,
+  .price,
+  .counter {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 43.75em) {
+  .image_container {
+    height: 25rem;
+    width: 25rem;
+  }
+  .price {
+    display: none;
+  }
+  .title {
+    justify-self: center;
+    padding-left: 0;
+  }
+  .remove {
+    display: none;
+  }
+  .title,
+  .quantity,
+  .total,
+  .counter {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5em;
+  }
+  .count .counter {
+    margin: 0;
+  }
+  .count {
+    align-items: center;
+  }
+  .inc,
+  .dec {
+    height: 4rem;
+    width: 4rem;
+  }
+}

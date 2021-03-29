@@ -13,7 +13,6 @@ const ProductContainer = ({ productInfo, info, openModal }) => {
   const dispatch = useDispatch();
 
   const addToCart = () => {
-    debugger;
     openModal(product);
     dispatch(addItemAction(product));
   };

@@ -3,6 +3,24 @@ html {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 80em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media screen and (max-width: 70em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   overflow-y: scroll;
   margin: 0;

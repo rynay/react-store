@@ -1,4 +1,5 @@
 .banner {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +16,7 @@
 }
 
 .banner h2 {
+  padding: 0 1em;
   margin-top: -0.75em;
   font-size: 10rem;
   color: #fff;
@@ -30,6 +32,18 @@
     rgba(248, 0, 186, 0.9),
     rgba(248, 0, 116, 0.9)
   );
+}
+
+@media screen and (max-width: 70em) {
+  .banner h2 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .banner h2 {
+    font-size: 5rem;
+  }
 }
 
 .banner .shop:link,
@@ -59,6 +73,12 @@
     rgba(119, 0, 255, 0.9),
     rgba(0, 153, 255, 0.9)
   );
+}
+
+@media screen and (max-width: 40em) {
+  .banner .shop {
+    font-size: 1.5rem;
+  }
 }
 
 .banner .shop::before {

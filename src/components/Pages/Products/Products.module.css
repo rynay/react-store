@@ -1,31 +1,32 @@
 .div {
+  width: 100%;
   flex: 1;
   display: flex;
   /* justify-content: center;
   align-items: center; */
+  max-width: 135rem;
+  margin: 0 auto;
 }
 
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.products__grid {
-  width: 100%;
-  margin: 0 auto;
-  padding: 5rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  justify-items: center;
-  align-content: start;
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
   background: linear-gradient(
     to right bottom,
     rgba(197, 23, 145, 0.25),
     rgba(44, 142, 255, 0.25)
   );
+}
+
+.products__grid {
+  width: 100%;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
+  align-content: start;
+  grid-gap: 2rem 2rem;
 }
 
 .products__header {

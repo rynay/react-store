@@ -48,6 +48,7 @@
   position: relative;
   overflow: hidden;
   min-width: 20vw;
+  min-height: 30vh;
   display: grid;
   justify-items: center;
   align-items: center;

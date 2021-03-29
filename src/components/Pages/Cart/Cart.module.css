@@ -17,7 +17,7 @@
 
 .category {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.1em;
   font-weight: bold;
   color: rgba(102, 8, 114, 0.75);
   text-align: center;
@@ -29,7 +29,7 @@
   padding: 0 3em;
   text-align: right;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.3em;
 }
 .total > *:not(:last-child) {
   margin-bottom: 0.25em;
@@ -42,7 +42,7 @@
   padding: 0.5em 1em;
   background-color: #fff;
   color: rgb(255, 81, 81);
-  font-size: 1.6rem;
+  font-size: 1em;
   font-weight: bold;
   border: 3px solid currentColor;
   border-radius: 0.25em;
@@ -54,4 +54,24 @@
 .total .remove_all:hover {
   color: rgb(177, 0, 0);
   background-color: rgb(253, 114, 114);
+}
+
+@media screen and (max-width: 60em) {
+  .container {
+    font-size: 1.4rem;
+  }
+  .items_container {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 43.75em) {
+  .category {
+    display: none;
+  }
+
+  .items_container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
