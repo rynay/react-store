@@ -1,5 +1,19 @@
 .container {
+  min-height: 100vh;
   padding: 5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 0, 179, 0.2),
+    rgba(0, 119, 255, 0.2)
+  );
+}
+
+.container > section {
+  padding: 2.5em;
   max-width: 80rem;
-  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.3em;
 }
