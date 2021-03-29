@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  overflow-y: scroll;
   margin: 0;
   font-size: 1.6rem;
   color: #1d1d1f;

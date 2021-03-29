@@ -58,12 +58,14 @@
   transition: transform 0.2s;
 }
 
-.product:hover .button{
+.product:hover .button {
   opacity: 1;
   transform: translate(0, 0);
 }
 
 .button {
+  text-decoration: none;
+  font-size: 1.4rem;
   opacity: 0;
   position: relative;
   z-index: 1;
@@ -80,13 +82,21 @@
   padding: 1em;
   border: 0;
   border-radius: 0.3em 0 0 0;
-  background-image: linear-gradient(to right bottom,rgb(255, 90, 214), rgb(92, 89, 255));
-  
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(255, 90, 214),
+    rgb(92, 89, 255)
+  );
+
   cursor: pointer;
   transform: translate(100%, 100%);
   transition: opacity 0.2s, transform 0.3s;
 }
 
 .button:hover {
-  background-image: linear-gradient(to right bottom,rgb(92, 89, 255), rgb(255, 90, 214));
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(92, 89, 255),
+    rgb(255, 90, 214)
+  );
 }
