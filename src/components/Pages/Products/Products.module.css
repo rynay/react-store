@@ -23,10 +23,15 @@
   width: 100%;
   padding: 5rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, 30rem);
   justify-items: center;
+  justify-content: center;
   align-content: start;
   grid-gap: 2rem 2rem;
+}
+
+.products__grid > * {
+  max-width: 30rem;
 }
 
 .products__header {
