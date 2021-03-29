@@ -64,3 +64,16 @@
   color: #fff;
   outline: none;
 }
+
+@media screen and (max-width: 30em) {
+  .nav a:link,
+  .nav a:visited {
+    padding: 0.5em 0.75em;
+  }
+}
+
+@media screen and (max-width: 22em) {
+  .category {
+    display: none;
+  }
+}

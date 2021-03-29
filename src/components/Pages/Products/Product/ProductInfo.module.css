@@ -17,7 +17,7 @@
 .product__image_container {
   padding: 1em;
   flex: 1;
-  flex-basis: 25rem;
+  flex-basis: 30rem;
 
   display: flex;
   align-items: center;
@@ -30,15 +30,19 @@
 
 .buttons_container {
   align-self: stretch;
-  padding: 0 4em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons_container > *:not(:last-child) {
+  margin-right: 1em;
 }
 
 .button,
 .button:link,
 .button:visited {
+  min-width: 12rem;
+  text-align: center;
   text-decoration: none;
   font-size: 1.4rem;
   text-align: center;
@@ -79,9 +83,20 @@
 
 .product__info {
   flex: 1;
-  flex-basis: 25rem;
+  flex-basis: 30rem;
 }
 .product__price {
   font-weight: bold;
   font-size: 2rem;
+}
+
+.description {
+  text-align: justify;
+}
+
+@media screen and (max-width: 33.95em) {
+  .product__price,
+  .product__title {
+    text-align: center;
+  }
 }

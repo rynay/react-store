@@ -11,27 +11,27 @@ const Header = () => {
       </NavLink>
       <nav className={s.nav}>
         <ul>
-          <li>
+          <li className={s.category}>
             <NavLink exact to="/products" activeClassName={s.active}>
               Products
             </NavLink>
           </li>
-          <li>
+          <li className={s.category}>
             <NavLink to="/products/iphone" activeClassName={s.active}>
               iPhone
             </NavLink>
           </li>
-          <li>
+          <li className={s.category}>
             <NavLink to="/products/mac" activeClassName={s.active}>
               Mac
             </NavLink>
           </li>
-          <li>
+          <li className={s.category}>
             <NavLink to="/products/ipad" activeClassName={s.active}>
               iPad
             </NavLink>
           </li>
-          <li>
+          <li className={s.category}>
             <NavLink to="/products/watch" activeClassName={s.active}>
               Watch
             </NavLink>
