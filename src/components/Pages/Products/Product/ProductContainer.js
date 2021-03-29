@@ -4,7 +4,7 @@ import { products } from '../../../../store/products';
 import { useRouteMatch } from 'react-router';
 import Product from './Product';
 
-const ProductContainer = ({ productInfo, info }) => {
+const ProductContainer = ({ productInfo, info, openModal }) => {
   const match = useRouteMatch();
   let product =
     productInfo || products.find((prod) => +prod.id === +match.params.id);
@@ -13,6 +13,8 @@ const ProductContainer = ({ productInfo, info }) => {
   const dispatch = useDispatch();
 
   const addToCart = () => {
+    debugger;
+    openModal(product);
     dispatch(addItemAction(product));
   };
 

@@ -22,9 +22,13 @@ const Product = ({ product, cart, addToCart, info = false, history }) => {
           <Link
             to={isInCart ? '/cart' : ''}
             onClick={(e) => {
-              if (isInCart) return;
               e.preventDefault();
-              addToCart();
+              if (!isInCart) {
+                addToCart();
+              } else {
+                history.push('/cart');
+              }
+              return;
             }}
             className={`${styles.button} ${styles.button_cart}`}
             disabled={isInCart}
