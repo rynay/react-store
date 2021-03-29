@@ -59,7 +59,6 @@
   transition: color 0.2s;
 }
 
-.nav a:hover,
 .nav .active:link,
 .nav .active:visited {
   color: #fff;
