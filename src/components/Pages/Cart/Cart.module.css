@@ -74,4 +74,11 @@
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
+  .total {
+    margin-top: 5rem;
+    align-self: center;
+    text-align: center;
+    font-size: 3rem;
+  }
 }
