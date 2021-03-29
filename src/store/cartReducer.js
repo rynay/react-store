@@ -47,9 +47,9 @@ export const cartReducer = (store = [], action) => {
 };
 
 export const addItemAction = (payload) => ({ type: ADD_TO_CART, payload });
-export const removeItemAction = (payload) => ({
+export const removeItemAction = (id) => ({
   type: REMOVE_FROM_CART,
-  payload,
+  payload: id,
 });
 export const incrementItemAction = (id) => ({
   type: INCREMENT_PRODUCT_COUNT,

@@ -1,10 +1,36 @@
 .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.items_container {
+  flex: 1;
   padding: 5em 0;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: min-content repeat(auto-fill, min-content);
+  justify-items: center;
+  align-content: start;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(78, 72, 170);
+  text-align: center;
 }
 
 .total {
-  padding: 1.5em 1em;
+  justify-self: end;
+  grid-column: -3 / -1;
+  padding: 3em;
   text-align: right;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+.total > *:not(:last-child) {
+  margin-bottom: 0.25em;
 }

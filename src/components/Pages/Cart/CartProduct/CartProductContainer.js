@@ -3,10 +3,15 @@ import { useDispatch } from 'react-redux';
 import {
   incrementItemAction,
   decrementItemAction,
+  removeItemAction,
 } from '../../../../store/cartReducer';
 
 const CartProductContainer = ({ item }) => {
   const dispatch = useDispatch();
+
+  const removeItem = (id) => {
+    dispatch(removeItemAction(id));
+  };
 
   const incItem = (id) => {
     dispatch(incrementItemAction(id));
@@ -16,7 +21,14 @@ const CartProductContainer = ({ item }) => {
     dispatch(decrementItemAction(id));
   };
 
-  return <CartProduct incItem={incItem} decItem={decItem} item={item} />;
+  return (
+    <CartProduct
+      incItem={incItem}
+      decItem={decItem}
+      removeItem={removeItem}
+      item={item}
+    />
+  );
 };
 
 export default CartProductContainer;

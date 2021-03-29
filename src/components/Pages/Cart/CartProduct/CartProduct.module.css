@@ -1,8 +1,3 @@
-.item {
-  display: grid;
-  grid-template-columns: 15rem 5fr 2fr;
-}
-
 .image_container {
   padding: 1rem;
   height: 15rem;
@@ -12,12 +7,17 @@
   justify-content: center;
 }
 
+.title {
+  justify-self: start;
+  padding-left: 1.5em;
+}
+
 .image_container img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.info {
+.quantity {
   display: flex;
   padding: 1.5em 0;
 }
@@ -28,19 +28,67 @@
 }
 
 .counter {
-  height: 3rem;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.5em;
+  min-width: 3em;
 }
 
-.button {
-  padding: 0.5rem 1rem;
-}
-
-.total {
-  padding: 0.25em;
+.total,
+.price {
+  margin: 0;
+  font-weight: bold;
+  padding: 1.25em;
+  font-size: 2rem;
   min-width: 5em;
   text-align: center;
+}
+
+.remove {
+  cursor: pointer;
+  margin-top: 1.5em;
+  align-self: flex-start;
+  padding: 1.5em;
+  border: 3px solid #f00;
+  border-radius: 0.25em;
+
+  background: url('https://img.icons8.com/plasticine/344/filled-trash.png')
+    center center / contain no-repeat;
+}
+
+.remove:hover {
+  background: linear-gradient(#ff000033, #ff000033),
+    url('https://img.icons8.com/plasticine/344/filled-trash.png') center center /
+      contain no-repeat;
+}
+
+.inc {
+  color: rgb(99, 248, 41);
+}
+.dec {
+  color: rgb(248, 72, 41);
+}
+
+.inc,
+.dec {
+  display: block;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: #fff;
+  border: 3px solid currentColor;
+  border-radius: 0.25em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inc:hover {
+  background-color: rgb(187, 255, 160);
+}
+.dec:hover {
+  background-color: rgb(255, 174, 160);
 }
