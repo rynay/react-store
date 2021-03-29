@@ -29,7 +29,7 @@ const CartProduct = ({ item, incItem, decItem, removeItem }) => {
           <div className={s.counter}>{count}</div>
           <button onClick={onDec} className={`${s.button} ${s.dec}`}>
             {' '}
-            -{' '}
+            &#8722;{' '}
           </button>
         </div>
       </div>

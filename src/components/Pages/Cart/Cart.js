@@ -25,8 +25,8 @@ const Cart = ({ cart, removeAll }) => {
               Remove All
             </button>
             <div>Subtotal: $ {total}</div>
-            <div>Taxes: $ {(total * 0.07).toFixed(0)}</div>
-            <div>Total: $ {(total * 1.07).toFixed(0)}</div>
+            <div>Tax: $ {(total * 0.07).toFixed(2)}</div>
+            <div>Total: $ {(total * 1.07).toFixed(2)}</div>
           </div>
         </div>
       ) : null}

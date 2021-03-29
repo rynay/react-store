@@ -6,6 +6,7 @@ import Cart from './components/Pages/Cart';
 import Products from './components/Pages/Products';
 import ProductPage from './components/Pages/Products/ProductPage';
 import Banner from './components/Banner';
+import NotFound from './components/NotFound';
 
 import { store } from './store';
 import { Provider } from 'react-redux';
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
     </Provider>

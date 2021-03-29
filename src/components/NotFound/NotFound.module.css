@@ -1,0 +1,27 @@
+.container {
+  min-height: 100vh;
+  text-align: center;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(248, 0, 116, 0.7),
+    rgba(25, 0, 255, 0.7)
+  );
+}
+
+.title {
+  margin-top: -0.75em;
+  font-size: 10rem;
+  color: #fff;
+  letter-spacing: 0.01rem;
+  color: #ffffff00;
+  text-shadow: -0.35rem -0.35rem #fff;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 204, 255, 0.9),
+    rgba(25, 0, 255, 0.9),
+    rgba(190, 0, 248, 0.9),
+    rgba(248, 0, 186, 0.9),
+    rgba(248, 0, 116, 0.9)
+  );
+}

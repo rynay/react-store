@@ -38,6 +38,7 @@
 }
 
 .product__image_container {
+  align-self: stretch;
   position: relative;
   overflow: hidden;
   min-width: 20vw;
