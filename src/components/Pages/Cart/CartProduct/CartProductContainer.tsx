@@ -5,7 +5,7 @@ import {
   incrementItemAction,
   decrementItemAction,
   removeItemAction,
-} from '../../../../store/cartReducer'
+} from '../../../../store/AC'
 import { TItem, TItemActionHandler } from '../../../../types'
 
 type PropTypes = {

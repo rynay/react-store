@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { useRouteMatch } from 'react-router'
 import { useState } from 'react'
 import { TItem } from '../../../types'
+import { TState } from '../../../store/types'
 
 const ProductsContainer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -30,7 +31,7 @@ const ProductsContainer = () => {
       category?: string
     }
   } = useRouteMatch()
-  let productsList = useSelector((store) => store.products)
+  let productsList = useSelector((store: TState) => store.products)
   if (match.params.category) {
     let param =
       match.params.category === 'watch' ? 'series' : match.params.category
