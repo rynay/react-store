@@ -1,11 +1,18 @@
-import CartProduct from './CartProduct';
-import s from './Cart.module.css';
-import Banner from '../../Banner';
+import React from 'react'
+import CartProduct from './CartProduct'
+import s from './Cart.module.css'
+import Banner from '../../Banner'
+import { TItem } from '../../../types'
 
-const Cart = ({ cart, removeAll }) => {
-  const total = cart.reduce((acc, item) => acc + item.total, 0);
+type PropTypes = {
+  cart: TItem[]
+  removeAll: () => void
+}
 
-  const items = cart.map((item) => <CartProduct key={item.id} item={item} />);
+const Cart = ({ cart, removeAll }: PropTypes) => {
+  const total = cart.reduce((acc, item) => acc + item.total, 0)
+
+  const items = cart.map((item) => <CartProduct key={item.id} item={item} />)
 
   return (
     <>
@@ -32,7 +39,7 @@ const Cart = ({ cart, removeAll }) => {
       ) : null}
       <>{!items.length ? <Banner title="Your cart is empty" /> : null}</>
     </>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart
