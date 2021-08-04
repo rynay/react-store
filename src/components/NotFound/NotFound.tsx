@@ -1,4 +1,5 @@
-import s from './NotFound.module.css';
+import React from 'react'
+import s from './NotFound.module.css'
 
 const NotFound = () => {
   return (
@@ -9,7 +10,7 @@ const NotFound = () => {
         Page Not Found
       </h1>
     </main>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound
