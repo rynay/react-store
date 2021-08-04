@@ -3,7 +3,7 @@ import { TItem } from '../../../../types'
 import s from './Modal.module.css'
 
 type PropTypes = {
-  item: TItem
+  item: TItem | null
   isOpen: boolean
   close: () => void
   message?: string

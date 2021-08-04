@@ -1,6 +1,16 @@
-import s from './Products.module.css';
-import Product from './Product';
-import Modal from './Modal';
+import React from 'react'
+import s from './Products.module.css'
+import Product from './Product'
+import Modal from './Modal'
+import { TItem } from '../../../types'
+
+type PropTypes = {
+  productsList: TItem[]
+  openModal: (item: TItem) => void
+  closeModal: () => void
+  isModalOpen: boolean
+  modalItem: TItem | null
+}
 
 const Products = ({
   productsList,
@@ -8,10 +18,10 @@ const Products = ({
   closeModal,
   isModalOpen,
   modalItem,
-}) => {
+}: PropTypes) => {
   const products = productsList.map((product) => (
     <Product key={product.id} productInfo={product} openModal={openModal} />
-  ));
+  ))
 
   return (
     <div className={s.container}>
@@ -23,7 +33,7 @@ const Products = ({
       </div>
       <Modal item={modalItem} close={closeModal} isOpen={isModalOpen} />
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

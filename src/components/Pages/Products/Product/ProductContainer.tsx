@@ -7,7 +7,7 @@ import Product from './Product'
 import { TItem } from '../../../../types'
 
 type PropTypes = {
-  info: boolean
+  info?: boolean
   openModal: (item: TItem) => void
   productInfo?: TItem
   modalItem?: TItem | null

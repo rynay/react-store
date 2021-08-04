@@ -8,7 +8,7 @@ type PropTypes = {
   product: TItem
   cart: TItem[]
   addToCart: () => void
-  info: boolean
+  info?: boolean
 }
 
 const Product = ({ product, cart, addToCart, info = false }: PropTypes) => {
