@@ -1,17 +1,26 @@
-import s from './CartProduct.module.css';
+import React from 'react'
+import { TItem, TItemActionHandler } from '../../../../types'
+import s from './CartProduct.module.css'
 
-const CartProduct = ({ item, incItem, decItem, removeItem }) => {
-  const { title, img, count, total, price } = item;
+type PropTypes = {
+  item: TItem
+  incItem: TItemActionHandler
+  decItem: TItemActionHandler
+  removeItem: TItemActionHandler
+}
+
+const CartProduct = ({ item, incItem, decItem, removeItem }: PropTypes) => {
+  const { title, img, count, total, price } = item
 
   const onInc = () => {
-    incItem(item.id);
-  };
+    incItem(item.id)
+  }
   const onDec = () => {
-    decItem(item.id);
-  };
+    decItem(item.id)
+  }
   const onRemove = () => {
-    removeItem(item.id);
-  };
+    removeItem(item.id)
+  }
 
   return (
     <>
@@ -36,7 +45,7 @@ const CartProduct = ({ item, incItem, decItem, removeItem }) => {
       <button onClick={onRemove} className={s.remove}></button>
       <div className={s.total}> $ {total}</div>
     </>
-  );
-};
+  )
+}
 
-export default CartProduct;
+export default CartProduct
