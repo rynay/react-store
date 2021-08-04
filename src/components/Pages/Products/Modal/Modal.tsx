@@ -5,7 +5,8 @@ import s from './Modal.module.css'
 type PropTypes = {
   item: TItem
   isOpen: boolean
-  message: string
+  close: () => void
+  message?: string
 }
 
 const Modal = ({ item, isOpen, message }: PropTypes) => {

@@ -1,13 +1,22 @@
-import s from './Product.module.css';
-import sInfo from './ProductInfo.module.css';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from 'react'
+import s from './Product.module.css'
+import sInfo from './ProductInfo.module.css'
+import { Link, useHistory } from 'react-router-dom'
+import { TItem } from '../../../../types'
 
-const Product = ({ product, cart, addToCart, info = false, history }) => {
-  const styles = info ? sInfo : s;
-  const { title, img, price, id } = product;
+type PropTypes = {
+  product: TItem
+  cart: TItem[]
+  addToCart: () => void
+  info: boolean
+}
 
-  const isInCart = !!cart.filter((prod) => prod.id === id).length;
+const Product = ({ product, cart, addToCart, info = false }: PropTypes) => {
+  const styles = info ? sInfo : s
+  const { title, img, price, id } = product
+  const history = useHistory()
+
+  const isInCart = !!cart.filter((prod) => prod.id === id).length
 
   const buttons = (
     <>
@@ -15,41 +24,37 @@ const Product = ({ product, cart, addToCart, info = false, history }) => {
         <>
           <Link
             to={'/products'}
-            className={`${styles.button} ${styles.button_back}`}
-          >
+            className={`${styles.button} ${styles.button_back}`}>
             To Products
           </Link>
           <Link
             to={isInCart ? '/cart' : ''}
             onClick={(e) => {
-              e.preventDefault();
+              e.preventDefault()
               if (!isInCart) {
-                addToCart();
+                addToCart()
               } else {
-                history.push('/cart');
+                history.push('/cart')
               }
-              return;
+              return
             }}
-            className={`${styles.button} ${styles.button_cart}`}
-            disabled={isInCart}
-          >
+            className={`${styles.button} ${styles.button_cart}`}>
             {isInCart ? 'In Cart' : 'Add'}
           </Link>
         </>
       ) : (
         <button
           onClick={(e) => {
-            e.preventDefault();
-            if (!isInCart) addToCart();
-            if (isInCart) history.push('/cart');
+            e.preventDefault()
+            if (!isInCart) addToCart()
+            if (isInCart) history.push('/cart')
           }}
-          className={`${styles.button} ${styles.button_cart}`}
-        >
+          className={`${styles.button} ${styles.button_cart}`}>
           {isInCart ? 'In Cart' : 'Add'}
         </button>
       )}
     </>
-  );
+  )
 
   const productDetails = (
     <section className={styles.product}>
@@ -67,7 +72,7 @@ const Product = ({ product, cart, addToCart, info = false, history }) => {
         {info && <p className={styles.description}>{product.info}</p>}
       </div>
     </section>
-  );
+  )
 
   return (
     <>
@@ -79,19 +84,7 @@ const Product = ({ product, cart, addToCart, info = false, history }) => {
         </Link>
       )}
     </>
-  );
-};
+  )
+}
 
-Product.propTypes = {
-  product: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    img: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-  }),
-  cart: PropTypes.array.isRequired,
-  addToCart: PropTypes.func.isRequired,
-  info: PropTypes.bool,
-};
-
-export default withRouter(Product);
+export default Product

@@ -7,6 +7,7 @@ export type TItem = {
   count: number
   total: number
   price: number
+  info: string
 }
 
 export type TItemActionHandler = (id: TItem['id']) => void
