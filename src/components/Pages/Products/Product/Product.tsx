@@ -1,4 +1,4 @@
-import React from 'react'
+
 import s from './Product.module.css'
 import sInfo from './ProductInfo.module.css'
 import { Link, useHistory } from 'react-router-dom'

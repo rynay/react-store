@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { TItem, TItemActionHandler } from '../../../../types'
 import s from './CartProduct.module.css'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CartProduct from './CartProduct'
 import s from './Cart.module.css'
 import Banner from '../../Banner'

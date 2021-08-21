@@ -1,4 +1,4 @@
-import React from 'react'
+
 import s from './Products.module.css'
 import Product from './Product'
 import Modal from './Modal'

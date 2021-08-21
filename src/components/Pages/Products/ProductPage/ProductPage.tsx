@@ -1,6 +1,6 @@
 import Product from '../Product'
 import s from './ProductPage.module.css'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Modal from '../Modal'
 import { TItem } from '../../../../types'
 

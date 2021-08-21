@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { addItemAction } from '../../../../store/AC'
 import { products } from '../../../../store/products'

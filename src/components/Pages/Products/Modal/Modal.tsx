@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { TItem } from '../../../../types'
 import s from './Modal.module.css'
 
